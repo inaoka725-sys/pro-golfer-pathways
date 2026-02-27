@@ -1,19 +1,25 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const navItems = [
   { label: "ホーム", href: "#hero" },
   { label: "法人概要", href: "#about" },
   { label: "事業内容", href: "#services" },
   { label: "トピックス", href: "#topics" },
-  { label: "お問い合わせ", href: "#contact" },
+  { label: "お問い合わせ", href: "/contact" },
 ];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const scrollTo = (href: string) => {
     setIsOpen(false);
+    if (href.startsWith("/")) {
+      navigate(href);
+      return;
+    }
     const el = document.querySelector(href);
     el?.scrollIntoView({ behavior: "smooth" });
   };

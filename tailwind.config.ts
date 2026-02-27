@@ -91,12 +91,17 @@ export default {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
+        sunrise: {
+          "0%, 100%": { opacity: "0.45", background: "linear-gradient(180deg, hsla(220, 30%, 10%, 0.5) 0%, hsla(220, 20%, 15%, 0.3) 100%)" },
+          "50%": { opacity: "0", background: "linear-gradient(180deg, hsla(40, 80%, 60%, 0.15) 0%, hsla(30, 60%, 50%, 0.05) 100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.8s ease-out forwards",
         "fade-in": "fade-in 1s ease-out forwards",
+        sunrise: "sunrise 6s ease-in-out infinite",
       },
     },
   },

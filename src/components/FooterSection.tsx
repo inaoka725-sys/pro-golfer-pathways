@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const FooterSection = () => {
   return (
     <footer id="contact" className="bg-primary text-primary-foreground py-16">
@@ -37,6 +39,16 @@ const FooterSection = () => {
                 <button onClick={() => document.querySelector("#topics")?.scrollIntoView({ behavior: "smooth" })} className="hover:text-primary-foreground transition-colors">
                   トピックス
                 </button>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-primary-foreground transition-colors">
+                  お問い合わせ
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy" className="hover:text-primary-foreground transition-colors">
+                  プライバシーポリシー
+                </Link>
               </li>
             </ul>
           </div>

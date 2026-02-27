@@ -11,6 +11,8 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-foreground/55" />
+        {/* Sunrise light animation overlay */}
+        <div className="absolute inset-0 animate-sunrise pointer-events-none" />
       </div>
 
       {/* Content */}
